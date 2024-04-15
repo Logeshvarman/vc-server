@@ -27,7 +27,7 @@ In your .env file,
 cp .env.sample .env;
 ```
 
-- Update the `RPC_URL_MUMBAI` to a Polygon Mumbai RPC endpoint. I used [Alchemy's](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M)
+- Update the `RPC_URL_AMOY` to a Polygon Mumbai RPC endpoint. I used [Alchemy's](https://alchemy.com/?r=zU2MTQwNTU5Mzc2M)
 - Optionally update the `VERIFIER_DID` to your DID
 - Don't change `HOSTED_SERVER_URL` or `FRONTEND_URL` yet
 
