@@ -17,6 +17,7 @@
     along with snarkJS. If not, see <https://www.gnu.org/licenses/>.
 */
 
+
 export {default as newZKey} from "./zkey_new.js";
 export {default as exportBellman} from "./zkey_export_bellman.js";
 export {default as importBellman} from "./zkey_import_bellman.js";
