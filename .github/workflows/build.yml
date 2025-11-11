@@ -35,20 +35,7 @@ jobs:
         npx eslint . --ext .js,.ts --fix || true
         npx prettier --write . || true
 
-    # Commit fixes if any changes
-    - name: Commit auto-fixes
-      run: |
-        git config user.name "auto-fixer-bot"
-        git config user.email "bot@vc-server.local"
-        git add .
-        if ! git diff --cached --quiet; then
-          echo "Committing auto-fixes..."
-          git commit -m "[Auto-fix] Lint/format corrections"
-          git push origin bonk-demo
-        else
-          echo "No changes to commit."
-        fi
-
+    
     # Run your project tests
     - name: Run tests
       env:
