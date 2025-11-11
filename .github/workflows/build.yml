@@ -1,0 +1,33 @@
+name: KeepBuild
+on:
+  push:
+    branches: [main, bonk-demo]
+  pull_request:
+    branches: [main, bonk-demo]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js 20.2.0
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.2.0'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start server with nodemon
+      run: npm start
+
+    # Optional: Add deployment steps here
+    # - name: Deploy to server
+    #   run: echo "Add deployment logic here"
+
+    # Optional: Copilot integration suggestions
+    - name: Copilot suggestions
+      run: echo "Use Copilot to generate tests or deployment scripts"
